@@ -12,8 +12,7 @@ string menuText="============================================\n"
         "= 2. Decodificar                           =\n"
         "= 3. Modificar ultimo valor codificado     =\n"
         "= 4. Ver ultimo valor codificado           =\n"
-        "= 5. Convertir BIN/HEX/DECIMAL             =\n"
-        "= 6. Salir                                 =\n"
+        "= 5. Salir                                 =\n"
         "============================================";
 
 void menu(){
@@ -116,7 +115,7 @@ void menu(){
             }else{
                 cout<<" Valor Codificado > "<<ham<<endl;
             }
-        }else if(entrada=="6"){running=false;}
+        }else if(entrada=="5"){cout<<"Saliendo..."<<endl;running=false;}
         else{cout<<errorEntrada<<endl;}
     }
 
