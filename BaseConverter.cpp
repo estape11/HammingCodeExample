@@ -126,3 +126,11 @@ bool checkBin(string num){
     }
     return temp;
 }
+
+string getSpace(int num){
+    string temp="";
+    for(int i=0;i<num;i++){
+        temp+=" ";
+    }
+    return temp;
+}

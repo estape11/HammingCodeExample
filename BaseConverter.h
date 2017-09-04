@@ -58,4 +58,11 @@ string toHex(string num);
  */
 bool checkBin(string num);
 
+/**
+ * Return num space of string
+ * @param num
+ * @return
+ */
+string getSpace(int num);
+
 #endif //TEST_BASECONVERTER_H
