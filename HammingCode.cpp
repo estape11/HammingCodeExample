@@ -15,19 +15,27 @@ void tabla1(string data){
     for(int k=0;k<data.length();k++){
         if (potenciaDos(k+1)){
             numParidad++;
-            cout<<"P"<<numParidad<<" ";
+            if(numParidad<10) {
+                cout << "P" << numParidad << "  ";
+            }else{
+                cout << "P" << numParidad << " ";
+            }
         }else{
             valor++;
-            cout<<"D"<<valor<<" ";
+            if(valor<10) {
+                cout << "D" << valor << "  ";
+            }else{
+                cout << "D" << valor << " ";
+            }
         }
     }cout<<endl;
 
     cout<<"Dato recibido ";
     for(int i=0;i<data.length();i++){
         if (potenciaDos(i+1)) {
-            cout<<"   ";
+            cout<<"    ";
         }else{
-            cout<<data[i]<<"  ";
+            cout<<data[i]<<"   ";
         }
     }cout<<endl;
 
@@ -38,20 +46,20 @@ void tabla1(string data){
         for (int j = 0; j < data.size(); j++) {
             string binTemp = invertirString(toBinary(j + 1));
             if (j == index) {
-                cout<<data[j]<<"  ";
+                cout<<data[j]<<"   ";
             }
 
             if (binTemp[i] == '1') {
                 if(potenciaDos(j+1)) {
                     continue;
                 }else if ((data[j] - 48) == 1) {
-                    cout<<"1  ";
+                    cout<<"1   ";
                     pares++;
                 }else{
-                    cout<<"0  ";
+                    cout<<"0   ";
                 }
             }else{
-                cout<<"   ";
+                cout<<"    ";
             }
         }cout<<endl;
     }cout<<endl;
