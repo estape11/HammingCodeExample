@@ -77,16 +77,24 @@ void tabla2(string data,string veri){
     for(int k=0;k<data.length();k++){
         if (potenciaDos(k+1)){
             numParidad++;
-            cout<<"P"<<numParidad<<" ";
+            if(numParidad<10) {
+                cout << "P" << numParidad << "  ";
+            }else{
+                cout << "P" << numParidad << " ";
+            }
         }else{
             valor++;
-            cout<<"D"<<valor<<" ";
+            if(valor<10) {
+                cout << "D" << valor << "  ";
+            }else{
+                cout << "D" << valor << " ";
+            }
         }
     }cout<<"Resultado_Prueba Bit_Paridad"<<endl;
 
     cout<<"Dato recibido ";
     for(int i=0;i<data.length();i++){
-        cout<<data[i]<<"  ";
+        cout<<data[i]<<"   ";
     }cout<<endl;
     for(int i=0;i<numParidad;i++) {
         cout<<"      P"<<(i+1)<<"      ";
@@ -95,20 +103,20 @@ void tabla2(string data,string veri){
         for (int j = 0; j < data.size(); j++) {
             string binTemp = invertirString(toBinary(j + 1));
             if (j == index) {
-                cout<<data[j]<<"  ";
+                cout<<data[j]<<"   ";
             }
 
             if (binTemp[i] == '1') {
                 if(potenciaDos(j+1)) {
                     continue;
                 }else if ((data[j] - 48) == 1) {
-                    cout<<"1  ";
+                    cout<<"1   ";
                     pares++;
                 }else{
-                    cout<<"0  ";
+                    cout<<"0   ";
                 }
             }else{
-                cout<<"   ";
+                cout<<"    ";
             }
         }
         if(veri[i]=='1'){
